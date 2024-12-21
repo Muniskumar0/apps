@@ -19,7 +19,7 @@ body{
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
 }
-.calculator{
+.apps-icons{
     display: grid;
     grid-template-columns: auto auto auto;
     text-align: center;
@@ -42,4 +42,13 @@ body{
 
 .innerContent img:hover{
     transform: translateY(-5px);
+}
+
+@media screen and (min-width:0px) and (max-width:430px) {
+
+.innerContent{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+    
 }
