@@ -1,0 +1,45 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+.apps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+
+}
+
+.title{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+.calculator{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20vh;
+}
+
+.innerContent{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    border-radius: 10px;
+    transition: all .2s;
+}
+.innerContent img{
+    height: 100px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.innerContent img:hover{
+    transform: translateY(-5px);
+}

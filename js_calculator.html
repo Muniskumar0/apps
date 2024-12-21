@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 228, 141);
+        position: relative;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
+        width: 300px;
+        padding: 20px;
+        background-color: rgb(255, 0, 0);
+        text-align: center;
+        margin-top: 15vh;
+        border-radius: 10px;
+        box-shadow: 0px 2px 10px black;
+    }
+
+    .inputBox{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputBox input{
+        padding: 15px;
+        background-color: rgb(222, 255, 216);
+        margin-bottom: 20px;
+        width: 250px;
+        border: none;
+        border-radius: 20px;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .inputBox input:hover{
+        border: 1px solid rgb(43, 255, 0);;
+    }
+
+    #ans{
+        background-color: rgb(217, 255, 209);
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        border-radius: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .btn{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 30px;
+        padding: 15px;
+    }
+
+    .btn button{
+        padding: 18px;
+        min-width: 60px;
+        font-size: 20px;
+        font-weight: 700;
+        background-color: rgb(43, 255, 0);
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: all .2s;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .btn button:hover{
+        transform: translateY(-5px);
+        box-shadow: 0px 1px 10px 3px rgb(255, 251, 0);
+    }
+
+    #clear{
+        width: min-content;
+        background-color: yellow;
+    }
+
+    .btn-back{
+        background-color:black;
+        padding: 10px;
+        color: white;
+        font-size: 15px;
+        border-radius: 15px;
+        border: none;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+
+    .btn-back:hover{
+        background-color: red;
+    }
+
+    @media screen and (min-width:0px) and (max-width:479px) {
+        .container{
+            width: 80%;
+        }
+        
+    }
+    @media screen and (min-width:480px) and (max-width:767px) {
+        .container{
+            width: 80%;
+            height: 80%;
+
+        }
+
+        .inputBox input{
+            width: 350px;
+        }
+        
+        .btn button{
+            width: 100px;
+        }
+        #clear{
+            width: 100px;
+        }
+    }
+
+
+
+</style>
+<body>
+    <a href="./index.html"><button class="btn-back">Back</button></a>
+    <div class="container">
+        <div class="inputBox">
+            <input required type="number" id="value1" placeholder="0" />
+            <input required type="number" id="value2" placeholder="0" />
+            <h1 id="ans"></h1>
+        </div>
+        <div class="btn">
+            <button class="btn1" id="add" onclick="add()">+</button>
+            <button class="btn1" id="sub" onclick="sub()">-</button>
+            <button class="btn1" id="mul" onclick="mul()">x</button>
+            <button class="btn1" id="div" onclick="div()">/</button>
+            <button class="btn1" id="modu" onclick="modu()">%</button>
+            <button class="btn1" id="clear" onclick="clear1()">Clear</button>
+        </div>
+    </div>
+
+    <script>
+        function add() {
+            let val1 = document.getElementById("value1").value;
+            let val2 = document.getElementById("value2").value;
+
+            val3 = val1 + val2
+
+            document.getElementById("ans").innerText=val3;
+            
+        }
+        function add() {
+            let val1 = document.getElementById("value1").value;
+            let val2 = document.getElementById("value2").value;
+
+            val3 = val1 + val2
+
+            document.getElementById("ans").innerText=val3;
+            
+        }
+        function add() {
+            let val1 =  document.getElementById("value1").value;
+            let val2 = document.getElementById("value2").value;
+
+            val3 = parseInt(val1) + parseInt(val2)
+
+            document.getElementById("ans").innerText=val3;
+            
+        }
+        function sub() {
+            let val1 =  document.getElementById("value1").value;
+            let val2 = document.getElementById("value2").value;
+
+            val3 = parseInt(val1) - parseInt(val2)
+
+            document.getElementById("ans").innerText=val3;
+            
+        }
+        function mul() {
+            let val1 =  document.getElementById("value1").value;
+            let val2 = document.getElementById("value2").value;
+
+            val3 = parseInt(val1) * parseInt(val2)
+
+            document.getElementById("ans").innerText=val3;
+            
+        }
+        function div() {
+            let val1 =  document.getElementById("value1").value;
+            let val2 = document.getElementById("value2").value;
+
+            val3 = parseInt(val1) / parseInt(val2)
+
+            document.getElementById("ans").innerText=val3;
+            
+        }
+        function modu() {
+            let val1 =  document.getElementById("value1").value;
+            let val2 = document.getElementById("value2").value;
+
+            val3 = parseInt(val1) % parseInt(val2)
+
+            document.getElementById("ans").innerText=val3;
+            
+        }
+        function clear1() {
+            document.getElementById("value1").value="";
+            document.getElementById("value2").value="";
+
+            document.getElementById("ans").innerText="";
+            
+        }
+    </script>
+</body>
+</html>
