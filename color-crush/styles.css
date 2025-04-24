@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9c5d1;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game-header h1 {
+    color: #ff85a2;
+    margin: 0;
+    font-size: 24px;
+}
+
+.score-display, .moves-display {
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 5px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: 20px;
+}
+
+.candy {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.candy:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.restart-btn {
+    background-color: #ff85a2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.restart-btn:hover {
+    background-color: #ff6b8b;
+    transform: scale(1.02);
+}
+
+/* Candy colors */
+.candy-red { background-color: #ff6b6b; }
+.candy-yellow { background-color: #ffd166; }
+.candy-green { background-color: #06d6a0; }
+.candy-blue { background-color: #118ab2; }
+.candy-purple { background-color: #9b5de5; }

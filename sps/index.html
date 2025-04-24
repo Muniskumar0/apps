@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="icon" href="../img/rock-paper-scissors.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1 class="title animate__animated animate__bounceIn">Rock Paper Scissors</h1>
+            <div class="score-container">
+                <div class="score-box">
+                    <span>Player</span>
+                    <span id="player-score">0</span>
+                </div>
+                <div class="score-box">
+                    <span>Computer</span>
+                    <span id="computer-score">0</span>
+                </div>
+                <div class="score-box">
+                    <span>Round</span>
+                    <span id="round">1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="choices">
+                <div class="choice" id="rock">
+                    <div class="choice-inner animate__animated" data-choice="rock">
+                        <span>✊</span>
+                        <p>Rock</p>
+                    </div>
+                </div>
+                <div class="choice" id="paper">
+                    <div class="choice-inner animate__animated" data-choice="paper">
+                        <span>✋</span>
+                        <p>Paper</p>
+                    </div>
+                </div>
+                <div class="choice" id="scissors">
+                    <div class="choice-inner animate__animated" data-choice="scissors">
+                        <span>✌️</span>
+                        <p>Scissors</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="battle-area">
+                <div class="player-choice animate__animated">
+                    <div class="choice-display" id="player-choice-display">
+                        <span>?</span>
+                    </div>
+                    <p>You</p>
+                </div>
+
+                <div class="vs-circle animate__animated">
+                    <span>VS</span>
+                </div>
+
+                <div class="computer-choice animate__animated">
+                    <div class="choice-display" id="computer-choice-display">
+                        <span>?</span>
+                    </div>
+                    <p>Computer</p>
+                </div>
+            </div>
+
+            <div class="result-container animate__animated">
+                <p id="result-text">Choose your weapon!</p>
+                <button id="next-round-btn" class="next-round-btn">Next Round</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="confetti-container"></div>
+
+    <audio id="win-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3"></audio>
+    <audio id="lose-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-retro-arcade-lose-2027.mp3"></audio>
+    <audio id="draw-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-neutral-game-notification-951.mp3"></audio>
+    <audio id="click-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-modern-click-box-check-1120.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
